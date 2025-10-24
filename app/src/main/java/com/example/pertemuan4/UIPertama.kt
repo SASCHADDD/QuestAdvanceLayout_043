@@ -30,9 +30,9 @@ fun ActivitasPertama(modifier: Modifier){
         .padding(top = 100.dp)
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Text(
-            stringResource(id=R.string.prodi),
+            stringResource(id = R.string.prodi),
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )
@@ -43,15 +43,15 @@ fun ActivitasPertama(modifier: Modifier){
         )
         Spacer(modifier = Modifier.height(25.dp))
 
-        Card (
-          modifier = Modifier
-              .height(160.dp)
-              .fillMaxWidth(1f)
-              .padding(12.dp),
+        Card(
+            modifier = Modifier
+                .height(160.dp)
+                .fillMaxWidth(1f)
+                .padding(12.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.LightGray
             )
-        ){
+        ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -63,9 +63,9 @@ fun ActivitasPertama(modifier: Modifier){
                         .padding(all = 5.dp)
                 )
 
-            Spacer(modifier = Modifier.width( 1.dp ))
+                Spacer(modifier = Modifier.width(1.dp))
                 Column() {
-                    Text (
+                    Text(
                         stringResource(R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
@@ -73,15 +73,12 @@ fun ActivitasPertama(modifier: Modifier){
                         modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
-
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp, bottom = 20.dp)
                     )
-
-
-
-
-
                 }
-
             }
         }
     }
