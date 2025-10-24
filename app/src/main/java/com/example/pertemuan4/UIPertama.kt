@@ -38,16 +38,16 @@ fun ActivitasPertama(modifier: Modifier){
         )
 
         Text(
-            text = stringResource(id = R.string.univ),
+            stringResource(R.string.univ),
             fontSize = 18.sp
         )
-        Spacer(modifier = Modifier.height(height = 25.dp))
+        Spacer(modifier = Modifier.height(25.dp))
 
         Card (
           modifier = Modifier
-              .height(height = 160.dp)
-              .fillMaxWidth(fraction = 1f)
-              .padding(all = 12.dp),
+              .height(160.dp)
+              .fillMaxWidth(1f)
+              .padding(12.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.LightGray
             )
@@ -59,13 +59,16 @@ fun ActivitasPertama(modifier: Modifier){
                 Image(
                     painter = gambar,
                     contentDescription = null,
-                    modifier = Modifier.size(size = 150.dp)
+                    modifier = Modifier.size(150.dp)
                         .padding(all = 5.dp)
                 )
 
-            Spacer(modifier = Modifier.width( 30.dp ))
+            Spacer(modifier = Modifier.width( 1.dp ))
                 Column() {
-                    stringResource(R.string.alamat)
+                    stringResource(R.string.nama)
+
+
+
                 }
 
             }
