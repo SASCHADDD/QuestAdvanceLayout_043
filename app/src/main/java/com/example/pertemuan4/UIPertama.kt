@@ -64,6 +64,10 @@ fun ActivitasPertama(modifier: Modifier){
                 )
 
             Spacer(modifier = Modifier.width( 30.dp ))
-
-                    )
+                Column() {
+                    stringResource(R.string.alamat)
                 }
+
+            }
+        }
+    }
