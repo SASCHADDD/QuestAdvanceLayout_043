@@ -3,7 +3,9 @@ package com.example.pertemuan4
 import android.provider.ContactsContract
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -46,14 +48,27 @@ fun Profile (modifier: Modifier) {
                 )
         )
         Spacer(modifier = Modifier.height(16.dp))
-        Text(
-            stringResource(R.string.nama),
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 28.sp,
-            color = Color.Black
-        )
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+
+        }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                stringResource(R.string.nama),
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 28.sp,
+                color = Color.Black
+            )
+            Text(
+                stringResource(R.string.username),
+                fontWeight = FontWeight.Thin,
+                fontSize = 20.sp,
+                color = Color.Black
+            )
+        }
     }
-}
 
 
 
