@@ -5,8 +5,12 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -91,7 +95,8 @@ fun Profile(modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
             MenuItem(
                 painterResource(R.drawable.satu),
                 stringResource(R.string.menu1)
@@ -104,41 +109,71 @@ fun Profile(modifier: Modifier = Modifier) {
                 painterResource(R.drawable.tiga),
                 stringResource(R.string.menu3)
             )
-        }
-    }
-}
 
+            Spacer(modifier = Modifier.height(16.dp))
 
-@Composable
-fun MenuItem(icon: Painter, text: String) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(80.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = Color.White,
-        ),
-        border = BorderStroke(2.dp, Color(0xFF1671B3))
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Image(
-                painter = icon,
-                contentDescription = null,
+            // --- Tombol Logout ---
+            Button(
+                onClick = { },
+                shape = RoundedCornerShape(50),
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
                 modifier = Modifier
-                    .size(50.dp)
-            )
-            Spacer(modifier = Modifier.width(16.dp))
+                    .fillMaxWidth()
+                    .height(50.dp)
+            ) {
+                val keluar = painterResource(id = R.drawable.logout)
+                Image(
+                    painter = keluar,
+                    contentDescription = "Logout Icon"
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(text = "Logout", fontSize = 16.sp)
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
             Text(
-                text = text,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Medium,
-                color = Color(0xFF1671B3)
+                text = stringResource(R.string.copy2),
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .padding(bottom = 24.dp),
+                color = Color.Gray,
+                fontSize = 12.sp
             )
         }
     }
 }
+
+    @Composable
+    fun MenuItem(icon: Painter, text: String) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(80.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White,
+            ),
+            border = BorderStroke(2.dp, Color(0xFF1671B3))
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = icon,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(50.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = text,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Color(0xFF1671B3)
+                )
+            }
+        }
+    }
