@@ -26,7 +26,7 @@ fun Profile(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(top = 40.dp, start = 1.dp, end = 16.dp),
+            .padding(top = 40.dp, start = 16.dp, end = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val fotoprofile = painterResource(R.drawable.fotoku)
@@ -88,7 +88,10 @@ fun Profile(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(24.dp))
 
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(12.dp)) {
             MenuItem(
                 painterResource(R.drawable.satu),
                 stringResource(R.string.menu1)
