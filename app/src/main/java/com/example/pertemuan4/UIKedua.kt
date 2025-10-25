@@ -48,19 +48,35 @@ fun Profile (modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Row(
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            verticalAlignment = Alignment.CenterVertically
+
+        )
+        {
             val ikon = painterResource(R.drawable.twitter)
             Image(
                 painter = ikon,
                 contentDescription = null,
-                modifier = Modifier.size(40.dp)
+                modifier = Modifier.size(26.dp)
             )
             val ikon2 = painterResource(R.drawable.instagram)
             Image(
                 painter = ikon2,
                 contentDescription = null,
-                modifier =
+                modifier = Modifier.size(40.dp)
+            )
+            val ikon3 = painterResource(R.drawable.github)
+            Image(
+                painter = ikon3,
+                contentDescription = null,
+                modifier = Modifier.size(26.dp)
+            )
+            val ikon4 = painterResource(R.drawable.linkedin)
+            Image(
+                painter = ikon4,
+                contentDescription = null,
+                modifier = Modifier.size(26.dp)
+            )
         }
             Spacer(modifier = Modifier.height(16.dp))
 
