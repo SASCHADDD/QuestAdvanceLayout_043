@@ -52,29 +52,17 @@ fun Profile(modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            val ikon1 = painterResource(R.drawable.twitter)
-            Image(
-                painter = ikon1,
-                contentDescription = null,
-                modifier = Modifier.size(26.dp)
+            SocialMedia(
+                painterResource(R.drawable.instagram)
             )
-            val ikon2 = painterResource(R.drawable.instagram)
-            Image(
-                painter = ikon2,
-                contentDescription = null,
-                modifier = Modifier.size(40.dp)
+            SocialMedia(
+                painterResource(R.drawable.github)
             )
-            val ikon3 = painterResource(R.drawable.github)
-            Image(
-                painter = ikon3,
-                contentDescription = null,
-                modifier = Modifier.size(26.dp)
+            SocialMedia(
+                painterResource(R.drawable.linkedin)
             )
-            val ikon4 = painterResource(R.drawable.linkedin)
-            Image(
-                painter = ikon4,
-                contentDescription = null,
-                modifier = Modifier.size(26.dp)
+            SocialMedia(
+                painterResource(R.drawable.twitter)
             )
         }
         Spacer(modifier = Modifier.height(16.dp))
@@ -117,7 +105,6 @@ fun Profile(modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // --- Tombol Logout ---
             Button(
                 onClick = { },
                 shape = RoundedCornerShape(50),
@@ -151,6 +138,7 @@ fun Profile(modifier: Modifier = Modifier) {
     }
 }
 
+
     @Composable
     fun MenuItem(icon: Painter, text: String) {
         Card(
@@ -167,7 +155,7 @@ fun Profile(modifier: Modifier = Modifier) {
                     .fillMaxSize()
                     .padding(horizontal = 16.dp),
                 verticalAlignment = Alignment.CenterVertically
-            ) {
+        ) {
                 Image(
                     painter = icon,
                     contentDescription = null,
@@ -184,3 +172,18 @@ fun Profile(modifier: Modifier = Modifier) {
             }
         }
     }
+@Composable
+        fun SocialMedia(
+            gambar: Painter,
+            modifier: Modifier = Modifier
+        ) {
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = modifier //
+                    .size(30.dp)
+
+            )
+        }
+
+
