@@ -1,5 +1,6 @@
 package com.example.pertemuan4
 
+import android.text.style.BackgroundColorSpan
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -7,10 +8,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,6 +30,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Profile (modifier: Modifier) {
+
     Column(
         modifier = Modifier
             .padding(top = 100.dp)
@@ -78,24 +83,47 @@ fun Profile (modifier: Modifier) {
                 modifier = Modifier.size(26.dp)
             )
         }
-            Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-            Text(
-                stringResource(R.string.nama),
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 28.sp,
-                color = Color.Black
+        Text(
+            stringResource(R.string.nama),
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 28.sp,
+            color = Color.Black
+        )
+        Text(
+            stringResource(R.string.username),
+            fontWeight = FontWeight.Thin,
+            fontSize = 20.sp,
+            color = Color.Black
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Card(
+            modifier = Modifier
+                .height(120.dp)
+                .fillMaxWidth()
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.LightGray
             )
-            Text(
-                stringResource(R.string.username),
-                fontWeight = FontWeight.Thin,
-                fontSize = 20.sp,
-                color = Color.Black
-            )
+        ) {
+            // isi dari Card
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Privacy",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
+            }
         }
     }
-
-
-
-
+}
 
