@@ -1,6 +1,5 @@
 package com.example.pertemuan4
 
-import android.provider.ContactsContract
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -49,9 +48,19 @@ fun Profile (modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Row(
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-
+            val ikon = painterResource(R.drawable.twitter)
+            Image(
+                painter = ikon,
+                contentDescription = null,
+                modifier = Modifier.size(40.dp)
+            )
+            val ikon2 = painterResource(R.drawable.instagram)
+            Image(
+                painter = ikon2,
+                contentDescription = null,
+                modifier =
         }
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -69,6 +78,7 @@ fun Profile (modifier: Modifier) {
             )
         }
     }
+
 
 
 
