@@ -11,4 +11,7 @@
     <string name="menu1">Riwayat Hidup</string>
     <string name="menu2">Riwayat Percintaan</string>
     <string name="menu3">Riwayat Pendidikan</string>
+    <string name="keluar">Logout</string>
+
+
 </resources>

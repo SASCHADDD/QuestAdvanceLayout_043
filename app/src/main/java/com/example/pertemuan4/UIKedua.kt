@@ -90,8 +90,13 @@ fun Profile(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             color = Color.Black
         )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            stringResource(R.string.role)
+            , fontSize = 16.sp,
+            color = Color.Black
+        )
         Spacer(modifier = Modifier.height(24.dp))
-
         Column(
             modifier = Modifier
                 .fillMaxWidth(),
@@ -127,7 +132,9 @@ fun Profile(modifier: Modifier = Modifier) {
                     contentDescription = "Logout Icon"
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(text = "Logout", fontSize = 16.sp)
+                Text(
+                    stringResource(R.string.keluar),
+                            fontSize = 16.sp)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
